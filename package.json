@@ -1,0 +1,8 @@
+{
+  "name": "unlimited-image-translator",
+  "version": "1.0.0",
+  "description": "Serverless Client-Side Google Lens & Image Translator on Vercel",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
