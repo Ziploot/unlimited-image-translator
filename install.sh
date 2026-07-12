@@ -16,4 +16,4 @@ curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-image-translator/m
 curl -sL "https://raw.githubusercontent.com/Ziploot/unlimited-image-translator/main/package.json" -o package.json
 
 echo "✅ Local files successfully configured!"
-echo "Upload these files to your GitHub repository and link it to Vercel to host your private image translator for $0!"
+echo "Upload these files to your GitHub repository and link it to Vercel to host your private image translator for \$0!"
