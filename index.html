@@ -269,13 +269,58 @@
       }
     }
 
-    function searchGoogleLens() {
+    async function searchGoogleLens() {
       if (!activeFile) {
         alert("Please upload an image first.");
         return;
       }
-      // Submit form to open google lens visual search in a new tab
-      document.getElementById("lensForm").submit();
+      
+      // Find the Google Lens search button
+      const buttons = document.querySelectorAll("button");
+      let lensBtn = null;
+      for (const btn of buttons) {
+        if (btn.textContent.includes("SEARCH GOOGLE LENS")) {
+          lensBtn = btn;
+          break;
+        }
+      }
+      
+      const originalText = lensBtn ? lensBtn.innerHTML : "SEARCH GOOGLE LENS";
+      if (lensBtn) {
+        lensBtn.disabled = true;
+        lensBtn.style.opacity = "0.7";
+        lensBtn.innerHTML = '<span class="spinner" style="display:inline-block; width:12px; height:12px; border:2px solid #fff; border-top-color:transparent; border-radius:50%; animation:spin 1s linear infinite; margin-right:8px;"></span>Uploading...';
+      }
+
+      try {
+        // Upload image to free temp hosting (tmpfiles.org) to bypass Google CSRF 403 blocks
+        const formData = new FormData();
+        formData.append("file", activeFile);
+
+        const res = await fetch("https://tmpfiles.org/api/v1/upload", {
+          method: "POST",
+          body: formData
+        });
+        const data = await res.json();
+        
+        if (data.status === "success" && data.data && data.data.url) {
+          const directUrl = data.data.url.replace("tmpfiles.org/", "tmpfiles.org/dl/");
+          const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(directUrl)}`;
+          window.open(lensUrl, "_blank");
+        } else {
+          throw new Error("Invalid API response");
+        }
+      } catch (err) {
+        console.warn("Lens upload bypass failed, trying fallback:", err);
+        // Fallback: Try classic form submit
+        document.getElementById("lensForm").submit();
+      } finally {
+        if (lensBtn) {
+          lensBtn.disabled = false;
+          lensBtn.style.opacity = "1";
+          lensBtn.innerHTML = originalText;
+        }
+      }
     }
   </script>
 </body>
