@@ -295,76 +295,43 @@
       // 1. Immediately open a blank tab synchronously to bypass browser popup blockers
       const newTab = window.open("about:blank", "_blank");
       if (newTab) {
-        newTab.document.write('<div style="font-family:sans-serif; text-align:center; padding-top:100px; color:#475569;"><h3>Redirecting to Google Lens...</h3><p>Uploading image metadata safely...</p></div>');
+        newTab.document.write('<div style="font-family:sans-serif; text-align:center; padding-top:100px; color:#475569;"><h3>Redirecting to Google Lens...</h3><p>Processing secure cloud upload...</p></div>');
       }
 
-      let success = false;
-
-      // 2. Try Provider 1: tmpfiles.org
       try {
-        console.log("Attempting upload to tmpfiles.org...");
-        const formData = new FormData();
-        formData.append("file", activeFile);
-
-        const res = await fetch("https://tmpfiles.org/api/v1/upload", {
+        console.log("Uploading via secure Vercel API proxy...");
+        // Send file binary data directly to Vercel Serverless Function
+        const res = await fetch("https://ziploot.vercel.app/api/upload-lens", {
           method: "POST",
-          body: formData
+          headers: {
+            "Content-Type": activeFile.type || "image/png"
+          },
+          body: activeFile
         });
+        
         const data = await res.json();
         
-        if (data.status === "success" && data.data && data.data.url) {
-          const directUrl = data.data.url.replace("tmpfiles.org/", "tmpfiles.org/dl/");
-          const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(directUrl)}`;
+        if (data.success && data.url) {
+          const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(data.url)}`;
           if (newTab) {
             newTab.location.href = lensUrl;
-            success = true;
           }
+        } else {
+          throw new Error(data.error || "Upload failed");
         }
       } catch (err) {
-        console.warn("tmpfiles.org upload failed:", err);
-      }
-
-      // 3. Try Provider 2: Litterbox (Catbox) as fallback if Provider 1 failed
-      if (!success) {
-        try {
-          console.log("Attempting upload to litterbox.catbox.moe...");
-          const formData = new FormData();
-          formData.append("reqtype", "fileupload");
-          formData.append("time", "1h");
-          formData.append("fileToUpload", activeFile);
-
-          const res = await fetch("https://litterbox.catbox.moe/resources/internals/api.php", {
-            method: "POST",
-            body: formData
-          });
-          const textUrl = await res.text();
-          
-          if (textUrl && textUrl.startsWith("http")) {
-            const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(textUrl.trim())}`;
-            if (newTab) {
-              newTab.location.href = lensUrl;
-              success = true;
-            }
-          }
-        } catch (err) {
-          console.warn("Litterbox upload failed:", err);
-        }
-      }
-
-      // 4. Ultimate Fallback: If both uploads failed (e.g. Brave Shield blocks both), close the tab and submit normal form
-      if (!success) {
-        console.warn("All uploads failed. Using fallback classic form submit.");
+        console.warn("Vercel proxy upload failed, trying fallback:", err);
         if (newTab) {
           newTab.close(); // Close the blank tab
         }
-        // Fallback to classic form (which will open in a new tab but might throw 403)
+        // Fallback: Try classic form submit
         document.getElementById("lensForm").submit();
-      }
-
-      if (lensBtn) {
-        lensBtn.disabled = false;
-        lensBtn.style.opacity = "1";
-        lensBtn.innerHTML = originalText;
+      } finally {
+        if (lensBtn) {
+          lensBtn.disabled = false;
+          lensBtn.style.opacity = "1";
+          lensBtn.innerHTML = originalText;
+        }
       }
     }
   </script>
