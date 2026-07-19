@@ -269,7 +269,7 @@
       }
     }
 
-        async function searchGoogleLens() {
+            async function searchGoogleLens() {
       if (!activeFile) {
         alert("Please upload an image first.");
         return;
@@ -301,10 +301,11 @@
       try {
         console.log("Uploading via secure Vercel API proxy...");
         // Send file binary data directly to Vercel Serverless Function
+        // Using "text/plain" to bypass CORS Preflight (OPTIONS) checks by browsers
         const res = await fetch("https://ziploot.vercel.app/api/upload-lens", {
           method: "POST",
           headers: {
-            "Content-Type": activeFile.type || "image/png"
+            "Content-Type": "text/plain"
           },
           body: activeFile
         });
@@ -320,10 +321,12 @@
           throw new Error(data.error || "Upload failed");
         }
       } catch (err) {
-        console.warn("Vercel proxy upload failed, trying fallback:", err);
+        console.warn("Vercel proxy upload failed:", err);
         if (newTab) {
           newTab.close(); // Close the blank tab
         }
+        // Diagnostic alert so we know exactly why it fails in the browser
+        alert("Google Lens Upload Error: " + err.toString());
         // Fallback: Try classic form submit
         document.getElementById("lensForm").submit();
       } finally {
