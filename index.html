@@ -269,7 +269,7 @@
       }
     }
 
-    async function searchGoogleLens() {
+        async function searchGoogleLens() {
       if (!activeFile) {
         alert("Please upload an image first.");
         return;
@@ -292,8 +292,17 @@
         lensBtn.innerHTML = '<span class="spinner" style="display:inline-block; width:12px; height:12px; border:2px solid #fff; border-top-color:transparent; border-radius:50%; animation:spin 1s linear infinite; margin-right:8px;"></span>Uploading...';
       }
 
+      // 1. Immediately open a blank tab synchronously to bypass browser popup blockers
+      const newTab = window.open("about:blank", "_blank");
+      if (newTab) {
+        newTab.document.write('<div style="font-family:sans-serif; text-align:center; padding-top:100px; color:#475569;"><h3>Redirecting to Google Lens...</h3><p>Uploading image metadata safely...</p></div>');
+      }
+
+      let success = false;
+
+      // 2. Try Provider 1: tmpfiles.org
       try {
-        // Upload image to free temp hosting (tmpfiles.org) to bypass Google CSRF 403 blocks
+        console.log("Attempting upload to tmpfiles.org...");
         const formData = new FormData();
         formData.append("file", activeFile);
 
@@ -306,20 +315,56 @@
         if (data.status === "success" && data.data && data.data.url) {
           const directUrl = data.data.url.replace("tmpfiles.org/", "tmpfiles.org/dl/");
           const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(directUrl)}`;
-          window.open(lensUrl, "_blank");
-        } else {
-          throw new Error("Invalid API response");
+          if (newTab) {
+            newTab.location.href = lensUrl;
+            success = true;
+          }
         }
       } catch (err) {
-        console.warn("Lens upload bypass failed, trying fallback:", err);
-        // Fallback: Try classic form submit
-        document.getElementById("lensForm").submit();
-      } finally {
-        if (lensBtn) {
-          lensBtn.disabled = false;
-          lensBtn.style.opacity = "1";
-          lensBtn.innerHTML = originalText;
+        console.warn("tmpfiles.org upload failed:", err);
+      }
+
+      // 3. Try Provider 2: Litterbox (Catbox) as fallback if Provider 1 failed
+      if (!success) {
+        try {
+          console.log("Attempting upload to litterbox.catbox.moe...");
+          const formData = new FormData();
+          formData.append("reqtype", "fileupload");
+          formData.append("time", "1h");
+          formData.append("fileToUpload", activeFile);
+
+          const res = await fetch("https://litterbox.catbox.moe/resources/internals/api.php", {
+            method: "POST",
+            body: formData
+          });
+          const textUrl = await res.text();
+          
+          if (textUrl && textUrl.startsWith("http")) {
+            const lensUrl = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(textUrl.trim())}`;
+            if (newTab) {
+              newTab.location.href = lensUrl;
+              success = true;
+            }
+          }
+        } catch (err) {
+          console.warn("Litterbox upload failed:", err);
         }
+      }
+
+      // 4. Ultimate Fallback: If both uploads failed (e.g. Brave Shield blocks both), close the tab and submit normal form
+      if (!success) {
+        console.warn("All uploads failed. Using fallback classic form submit.");
+        if (newTab) {
+          newTab.close(); // Close the blank tab
+        }
+        // Fallback to classic form (which will open in a new tab but might throw 403)
+        document.getElementById("lensForm").submit();
+      }
+
+      if (lensBtn) {
+        lensBtn.disabled = false;
+        lensBtn.style.opacity = "1";
+        lensBtn.innerHTML = originalText;
       }
     }
   </script>
