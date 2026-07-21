@@ -248,7 +248,7 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
       </a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/watermark-remover" style="color: #fff; background: rgba(129,140,248,0.15);">Watermark Remover</a></li>
+        <li><a href="https://same-favorite-joke-keeps.trycloudflare.com" style="color: #fff; background: rgba(129,140,248,0.15);">Watermark Remover</a></li>
         <li><a href="/addfree">Social Downloader</a></li>
         <li><a href="/ai-image-generator">AI Generator</a></li>
         <li><a href="/pdf-toolset">PDF Tools</a></li>
@@ -256,6 +256,52 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
       </ul>
     </div>
   </header>
+
+  <!-- Top Native Ad Block -->
+  <div style="width: 100%; max-width: 1240px; margin: 10px auto 12px; padding: 0 16px; text-align: center;">
+    <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
+    <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
+  </div>
+
+
+  <!-- Banner 728x90 Ad Block -->
+  <div style="display:flex;justify-content:center;align-items:center;margin:20px auto;width:100%;min-height:94px;overflow:hidden;">
+    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+  <!-- Sticky Footer Ad Bar -->
+  <div id="stickyAdBar" style="position:fixed;bottom:0;left:0;right:0;height:80px;background:rgba(3,7,22,0.95);backdrop-filter:blur(24px);border-top:1px solid rgba(100,110,255,0.3);z-index:7000;display:flex;align-items:center;justify-content:center;box-shadow:0 -16px 48px rgba(0,0,0,0.55);">
+    <button onclick="document.getElementById('stickyAdBar').style.display='none'" style="position:absolute;top:-14px;right:20px;width:28px;height:28px;background:#818cf8;border:none;border-radius:50%;color:#fff;font-size:14px;cursor:pointer;">✕</button>
+    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+  <!-- Social Bar Ad Script -->
+  <script>
+    window.addEventListener('load', function() {
+      if (!document.getElementById('socialBarAdScript')) {
+        var script = document.createElement('script');
+        script.id = 'socialBarAdScript';
+        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+        document.body.appendChild(script);
+      }
+    });
+  </script>
+
+</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
+  </div>
+
+
+  <!-- Social Bar Ad Script -->
+  <script>
+    window.addEventListener('load', function() {
+      if (!document.getElementById('socialBarAdScript')) {
+        var script = document.createElement('script');
+        script.id = 'socialBarAdScript';
+        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+        document.body.appendChild(script);
+      }
+    });
+  </script>
+
+</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
+  </div>
+
 
   <!-- Main Content Wrap -->
   <div class="wrap">
@@ -604,6 +650,39 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
       }
     }
   </script>
+
+  <!-- Sticky Footer Ad Bar -->
+  <div id="stickyAdBar" style="position:fixed;bottom:0;left:0;right:0;height:80px;background:rgba(3,7,22,0.95);backdrop-filter:blur(24px);border-top:1px solid rgba(100,110,255,0.3);z-index:7000;display:flex;align-items:center;justify-content:center;box-shadow:0 -16px 48px rgba(0,0,0,0.55);">
+    <button onclick="document.getElementById('stickyAdBar').style.display='none'" style="position:absolute;top:-14px;right:20px;width:28px;height:28px;background:#818cf8;border:none;border-radius:50%;color:#fff;font-size:14px;cursor:pointer;">✕</button>
+    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+  <!-- Social Bar Ad Script -->
+  <script>
+    window.addEventListener('load', function() {
+      if (!document.getElementById('socialBarAdScript')) {
+        var script = document.createElement('script');
+        script.id = 'socialBarAdScript';
+        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+        document.body.appendChild(script);
+      }
+    });
+  </script>
+
+</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
+  </div>
+
+
+  <!-- Social Bar Ad Script -->
+  <script>
+    window.addEventListener('load', function() {
+      if (!document.getElementById('socialBarAdScript')) {
+        var script = document.createElement('script');
+        script.id = 'socialBarAdScript';
+        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+        document.body.appendChild(script);
+      }
+    });
+  </script>
+
 </body>
 </html>
 """
