@@ -348,7 +348,8 @@ body {
 
 
 
-/* ZIPLOOT UNIFORM MASTER NAVBAR & AD SYSTEM (MOBILE & DESKTOP PERFECT) */
+
+/* ZIPLOOT UNIFORM MASTER NAVBAR & AD SYSTEM */
 :root {
   --nav-h: 80px;
   --border-lit: rgba(100,110,255,0.3);
@@ -422,19 +423,45 @@ header {
   box-shadow: 0 0 22px rgba(129,140,248,0.35); white-space: nowrap;
 }
 
+/* Dropdown Menu Styling & Invisible Hover Bridge Fix */
 .nav-item-dropdown { position: relative; }
 .dropdown-trigger {
   font-family: var(--font-d); font-size: 13px; font-weight: 600; color: var(--ink-2);
   padding: 7px 14px; border-radius: 100px; cursor: pointer; display: flex; align-items: center; gap: 6px;
 }
 .dropdown-menu {
-  position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%) translateY(12px);
   background: rgba(4,8,24,0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-lit); border-radius: 16px; padding: 8px; min-width: 190px;
-  display: none; flex-direction: column; gap: 4px; box-shadow: 0 16px 40px rgba(0,0,0,0.6); list-style: none;
-  z-index: 10000;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6); list-style: none;
+  z-index: 10000; display: flex; flex-direction: column; gap: 4px;
 }
-.nav-item-dropdown:hover .dropdown-menu, .nav-item-dropdown.active .dropdown-menu { display: flex; }
+/* Invisible hover bridge to prevent dropdown hiding when mouse moves down */
+.dropdown-menu::before {
+  content: ''; position: absolute; top: -20px; left: 0; right: 0; height: 25px;
+}
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown.active .dropdown-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateX(-50%) translateY(6px);
+}
+
+.dropdown-menu li { width: 100%; }
+.dropdown-menu li a {
+  display: block; width: 100%; padding: 8px 14px !important;
+  font-family: var(--font-d); font-size: 13px; font-weight: 600;
+  color: var(--ink-2) !important; text-decoration: none;
+  border-radius: 8px !important; transition: all 0.2s;
+  background: transparent !important; box-shadow: none !important;
+  border: none !important; text-align: left;
+}
+.dropdown-menu li a:hover {
+  background: rgba(129,140,248,0.15) !important; color: #fff !important;
+  transform: translateX(4px);
+}
 
 .mobile-only { display: none !important; }
 .desktop-only { display: block !important; }
@@ -484,70 +511,7 @@ header {
   font-size: 14px; font-weight: 700; cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 10000;
 }
-
-</head>
-<body>
-
-  <!-- Navigation -->
-  
-  <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
-  
-  <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
-  
-  <!-- Master Floating Glass Navbar (100% Uniform Desktop & Mobile) -->
-  <header>
-    <div class="nav-pill">
-      <a href="/" class="nav-logo">
-        <span class="nz">ZipLoot</span><span class="nl">.app</span> <span class="logo-dot"></span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/watermark-remover">Watermark Remover</a></li>
-        <li><a href="/addfree">Social Downloader</a></li>
-        
-        <!-- Desktop-only Development Dropdown -->
-        <li class="nav-item-dropdown desktop-only">
-          <span class="dropdown-trigger">
-            Development 
-            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: var(--ink-2, #94a3b8); transition: transform 0.2s;"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <ul class="dropdown-menu">
-            <li><a href="/ai-image-generator">AI Generator</a></li>
-            <li><a href="/pdf-toolset">PDF Tools</a></li>
-            <li><a href="https://ziploot.github.io/unlimited-image-translator/">Image Translator</a></li>
-          </ul>
-        </li>
-
-        <!-- Mobile-only individual links -->
-        <li class="mobile-only"><a href="/ai-image-generator">AI Generator</a></li>
-        <li class="mobile-only"><a href="/pdf-toolset">PDF Tools</a></li>
-        <li class="mobile-only"><a href="https://ziploot.github.io/unlimited-image-translator/">Image Translator</a></li>
-        
-        <li><a href="https://ziploot.github.io/admin.html" class="nav-cta">Link Short</a></li>
-      </ul>
-    </div>
-  </header>
-
-
-
-
-    <!-- Top Ad Network Section -->
-    <div class="zl-ad-section">
-      <!-- Native Link -->
-      <div class="zl-ad-native-container">
-        <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
-        <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
-      </div>
-      <!-- 728x90 Banner -->
-      <div class="zl-ad-banner-container">
-        <iframe id="zl_banner_frame_1" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;"></iframe>
-        <script>
-          (function(){
-            var f = document.getElementById('zl_banner_frame_1');
-            if(f){
-              var d = f.contentWindow.document;
-              d.open();
-              d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style><style>
+<style>
 
 /* ZIPLOOT AD NETWORK SYSTEM (WITH ADS, ZERO OUTLINE BOX, MOBILE HIDDEN) */
 body {
@@ -636,7 +600,30 @@ body {
         if(f){
           var d = f.contentWindow.document;
           d.open();
-          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script></body></html>');
+          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script>
+  <!-- Dropdown Interactive Click & Hover Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdowns = document.querySelectorAll(".nav-item-dropdown");
+      dropdowns.forEach(function(dd) {
+        var trigger = dd.querySelector(".dropdown-trigger");
+        if (trigger) {
+          trigger.addEventListener("click", function(e) {
+            e.stopPropagation();
+            dropdowns.forEach(function(other) {
+              if (other !== dd) other.classList.remove("active");
+            });
+            dd.classList.toggle("active");
+          });
+        }
+      });
+      document.addEventListener("click", function() {
+        dropdowns.forEach(function(dd) { dd.classList.remove("active"); });
+      });
+    });
+  </script>
+
+</body></html>');
           d.close();
         }
       })();
