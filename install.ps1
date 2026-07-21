@@ -1,11 +1,11 @@
 # =================================================================
-#  ZipLoot AI Watermark Remover — Windows A-to-Z Single File Installer
+#  ZipLoot AI Watermark Remover — Windows Single File Installer
 # =================================================================
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Write-Host "🚀 Starting A to Z ZipLoot Watermark AI VPS Setup..." -ForegroundColor Cyan
+Write-Host "🚀 Starting ZipLoot Watermark AI Setup..." -ForegroundColor Cyan
 
-# Find Python executable on Windows VPS
+# Find Python executable on Windows
 $pythonPath = "python"
 if (-not (Get-Command "python" -ErrorAction SilentlyContinue)) {
     $possiblePaths = @(
@@ -32,18 +32,7 @@ Write-Host "📦 Installing required Python packages..." -ForegroundColor Yellow
 & $pythonPath -m pip install --upgrade pip
 & $pythonPath -m pip install opencv-python numpy onnxruntime pillow imageio imageio-ffmpeg
 
-# 2. Download cloudflared if missing
-if (-not (Test-Path ".\cloudflared.exe")) {
-    Write-Host "🌐 Downloading Cloudflare Tunnel (cloudflared.exe)..." -ForegroundColor Yellow
-    try {
-        Invoke-WebRequest -Uri "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe" -OutFile ".\cloudflared.exe"
-        Write-Host "✅ Cloudflared Downloaded!" -ForegroundColor Green
-    } catch {
-        Write-Host "⚠️ Skipping cloudflared download fallback." -ForegroundColor Yellow
-    }
-}
-
-# 3. Start Python Server in Background
+# 2. Start Python Server
 Write-Host "🧠 Starting AI Server on http://localhost:8080 ..." -ForegroundColor Green
-$env:PYTHONIOENCODING="utf-8"
+[Environment]::SetEnvironmentVariable('PYTHONIOENCODING', 'utf-8', 'Process')
 & $pythonPath video_web_app.py
