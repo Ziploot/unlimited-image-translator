@@ -546,7 +546,7 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
         return;
       }
 
-      status.innerText = '⚡ Processing Video Frames on VPS AI Engine...';
+      status.innerText = '⚡ Processing Video Frames with AI Engine...';
 
       let formData = new FormData();
       formData.append('video', vidFile);
