@@ -350,6 +350,84 @@ body {
 
 
 
+<style>
+
+/* ZIPLOOT AD NETWORK SYSTEM (WITH ADS, ZERO OUTLINE BOX, MOBILE HIDDEN) */
+body {
+  padding-bottom: 120px !important;
+}
+
+.zl-ad-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  clear: both;
+}
+.zl-ad-native-container {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+}
+.zl-ad-banner-container {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.zl-sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgba(2, 6, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.zl-sticky-close {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: #818cf8;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+@media (max-width: 768px) {
+  .zl-sticky-ad-footer { display: none !important; }
+  body { padding-bottom: 20px !important; }
+}
+
+</style>
 </head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script>
   <!-- Sticky Footer Ad Bar -->
   <div class="zl-sticky-ad-footer" id="zlStickyFooterAd">
@@ -361,7 +439,85 @@ body {
         if(f){
           var d = f.contentWindow.document;
           d.open();
-          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script>
+          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style><style>
+
+/* ZIPLOOT AD NETWORK SYSTEM (WITH ADS, ZERO OUTLINE BOX, MOBILE HIDDEN) */
+body {
+  padding-bottom: 120px !important;
+}
+
+.zl-ad-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  clear: both;
+}
+.zl-ad-native-container {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+}
+.zl-ad-banner-container {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.zl-sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgba(2, 6, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.zl-sticky-close {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: #818cf8;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+@media (max-width: 768px) {
+  .zl-sticky-ad-footer { display: none !important; }
+  body { padding-bottom: 20px !important; }
+}
+
+</style>
+</head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script>
   <!-- Dropdown Interactive Click & Hover Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -384,7 +540,18 @@ body {
     });
   </script>
 
-</body></html>');
+
+  <!-- Sticky Footer Ad Bar -->
+  <div class="zl-sticky-ad-footer" id="zlStickyFooterAd">
+    <button class="zl-sticky-close" onclick="document.getElementById('zlStickyFooterAd').style.display='none'">✕</button>
+    <iframe id="zl_banner_frame_2" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;"></iframe>
+    <script>
+      (function(){
+        var f = document.getElementById('zl_banner_frame_2');
+        if(f){
+          var d = f.contentWindow.document;
+          d.open();
+          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script></body></html>');
           d.close();
         }
       })();
