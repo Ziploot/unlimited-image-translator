@@ -347,15 +347,14 @@ body {
 <style>
 
 
-/* ZIPLOOT UNIFORM MASTER NAVBAR & AD SYSTEM */
+
+/* ZIPLOOT UNIFORM MASTER NAVBAR & AD SYSTEM (MOBILE & DESKTOP PERFECT) */
 :root {
   --nav-h: 80px;
-  --void: #000510;
   --border-lit: rgba(100,110,255,0.3);
   --ink-0: #ffffff;
   --ink-1: #e2e8f0;
   --ink-2: #94a3b8;
-  --ink-3: #3d4f6b;
   --v: #818cf8;
   --c: #22d3ee;
   --grd-a: linear-gradient(135deg,#818cf8,#c084fc,#22d3ee);
@@ -369,7 +368,6 @@ body {
   padding-bottom: 120px !important;
 }
 
-/* Master Header Styling */
 header {
   position: fixed; top: 0; left: 0; right: 0;
   height: var(--nav-h);
@@ -379,27 +377,29 @@ header {
   background: transparent;
   border: none; box-shadow: none;
 }
+
 .nav-pill {
   width: 100%; max-width: 1240px;
   display: flex; align-items: center; justify-content: space-between;
-  background: rgba(4,8,24,0.78);
+  background: rgba(4,8,24,0.88);
   backdrop-filter: blur(28px) saturate(160%);
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid var(--border-lit);
   border-radius: 100px;
   padding: 0 28px;
   height: 56px;
-  box-shadow: 0 4px 36px rgba(0,0,0,0.5),0 0 0 1px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 36px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,0,0,0.4);
   position: relative; overflow: visible;
 }
 .nav-pill::before {
   content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px;
   background: linear-gradient(90deg,transparent,rgba(129,140,248,0.65),transparent);
 }
+
 .nav-logo {
-  font-family: var(--font-d); font-size: 21px; font-weight: 800;
+  font-family: var(--font-d); font-size: 20px; font-weight: 800;
   letter-spacing: -0.8px; display: flex; align-items: center; gap: 3px;
-  text-decoration: none;
+  text-decoration: none; flex-shrink: 0;
 }
 .nav-logo .nz { background: var(--grd-a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .nav-logo .nl { color: #fff; }
@@ -407,40 +407,51 @@ header {
   display: inline-block; width: 6px; height: 6px;
   background: var(--c); border-radius: 50%;
   box-shadow: 0 0 10px var(--c),0 0 20px var(--c);
-  animation: dpulse 2s ease-in-out infinite;
 }
-@keyframes dpulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.5);opacity:.7} }
 
 .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
-  font-family: var(--font-d); font-size: 14px; font-weight: 600;
-  color: var(--ink-2); padding: 8px 16px; border-radius: 100px; transition: all .25s;
-  text-decoration: none; display: inline-block;
+  font-family: var(--font-d); font-size: 13px; font-weight: 600;
+  color: var(--ink-2); padding: 7px 14px; border-radius: 100px; transition: all .25s;
+  text-decoration: none; white-space: nowrap; display: inline-block;
 }
-.nav-links a:hover { color: #fff; background: rgba(129,140,248,0.1); }
+.nav-links a:hover { color: #fff; background: rgba(129,140,248,0.15); }
 .nav-cta {
   background: var(--grd-a) !important; color: #fff !important;
-  padding: 9px 22px !important; border-radius: 100px !important;
-  box-shadow: 0 0 22px rgba(129,140,248,0.35);
+  padding: 7px 18px !important; border-radius: 100px !important;
+  box-shadow: 0 0 22px rgba(129,140,248,0.35); white-space: nowrap;
 }
 
-/* Dropdown styling */
 .nav-item-dropdown { position: relative; }
 .dropdown-trigger {
-  font-family: var(--font-d); font-size: 14px; font-weight: 600; color: var(--ink-2);
-  padding: 8px 16px; border-radius: 100px; cursor: pointer; display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-d); font-size: 13px; font-weight: 600; color: var(--ink-2);
+  padding: 7px 14px; border-radius: 100px; cursor: pointer; display: flex; align-items: center; gap: 6px;
 }
 .dropdown-menu {
   position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
-  background: rgba(4,8,24,0.95); backdrop-filter: blur(20px); border: 1px solid var(--border-lit);
-  border-radius: 16px; padding: 8px; min-width: 180px; display: none; flex-direction: column; gap: 4px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.6); list-style: none;
+  background: rgba(4,8,24,0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-lit); border-radius: 16px; padding: 8px; min-width: 190px;
+  display: none; flex-direction: column; gap: 4px; box-shadow: 0 16px 40px rgba(0,0,0,0.6); list-style: none;
+  z-index: 10000;
 }
 .nav-item-dropdown:hover .dropdown-menu, .nav-item-dropdown.active .dropdown-menu { display: flex; }
-.dropdown-menu a { width: 100%; box-sizing: border-box; text-align: left; }
 
-.mobile-only { display: none; }
+.mobile-only { display: none !important; }
+.desktop-only { display: block !important; }
+
+/* Mobile Navbar Optimization (< 768px) */
 @media (max-width: 768px) {
+  header { padding: 0 8px; height: 64px; }
+  .nav-pill {
+    padding: 0 12px; height: 48px; border-radius: 24px; gap: 6px;
+  }
+  .nav-logo { font-size: 16px; }
+  .nav-links {
+    overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; gap: 3px;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { font-size: 11px; padding: 5px 9px; }
+  .nav-cta { padding: 5px 12px !important; font-size: 11px !important; }
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
   .zl-sticky-ad-footer { display: none !important; }
@@ -474,84 +485,6 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 10000;
 }
 
-<style>
-
-/* ZIPLOOT AD NETWORK SYSTEM (WITH ADS, ZERO OUTLINE BOX, MOBILE HIDDEN) */
-body {
-  padding-bottom: 120px !important;
-}
-
-.zl-ad-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  clear: both;
-}
-.zl-ad-native-container {
-  width: 100%;
-  text-align: center;
-  min-height: 50px;
-}
-.zl-ad-banner-container {
-  width: 100%;
-  max-width: 728px;
-  min-height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  overflow: hidden;
-}
-
-.zl-sticky-ad-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 90px;
-  background: rgba(2, 6, 24, 0.96);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(129, 140, 248, 0.3);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
-}
-.zl-sticky-close {
-  position: absolute;
-  top: -14px;
-  right: 20px;
-  width: 28px;
-  height: 28px;
-  background: #818cf8;
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-}
-
-@media (max-width: 768px) {
-  .zl-sticky-ad-footer { display: none !important; }
-  body { padding-bottom: 20px !important; }
-}
-
-</style>
 </head>
 <body>
 
@@ -560,6 +493,8 @@ body {
   <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
   
   <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
+  
+  <!-- Master Floating Glass Navbar (100% Uniform Desktop & Mobile) -->
   <header>
     <div class="nav-pill">
       <a href="/" class="nav-logo">
@@ -574,7 +509,7 @@ body {
         <li class="nav-item-dropdown desktop-only">
           <span class="dropdown-trigger">
             Development 
-            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: var(--ink-2); transition: transform 0.2s;"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: var(--ink-2, #94a3b8); transition: transform 0.2s;"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
           <ul class="dropdown-menu">
             <li><a href="/ai-image-generator">AI Generator</a></li>
@@ -592,6 +527,7 @@ body {
       </ul>
     </div>
   </header>
+
 
 
 
