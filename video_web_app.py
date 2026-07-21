@@ -409,19 +409,33 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
 
     async function processImageInpaint() {
       let status = document.getElementById('imgStatus');
-      status.innerText = '⏳ Processing Image on LaMa AI Engine...';
+      status.innerText = '⏳ Processing Image on AI Engine...';
       
       let imgDataB64 = imgCanvas.toDataURL('image/png');
       let maskDataB64 = maskCanvas.toDataURL('image/png');
 
+      let payload = JSON.stringify({ image: imgDataB64, mask: maskDataB64 });
+
       try {
-        let res = await fetch('/api/inpaint', {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ image: imgDataB64, mask: maskDataB64 })
-        });
+        let res;
+        try {
+          res = await fetch('/api/inpaint', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload
+          });
+        } catch(primaryErr) {
+          // Backup fallback to zrok URL
+          res = await fetch('https://5eeo6bfngypc.shares.zrok.io/api/inpaint', {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'skip_zrok_interstitial': 'true'
+            },
+            body: payload
+          });
+        }
+
         let text = await res.text();
         let json;
         try { json = JSON.parse(text); } catch(e) { throw new Error('Processing failed. Please try again.'); }
@@ -558,10 +572,19 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
       }));
 
       try {
-        let res = await fetch('/api/process_video', { 
-          method: 'POST', 
-          body: formData 
-        });
+        let res;
+        try {
+          res = await fetch('/api/process_video', { 
+            method: 'POST', 
+            body: formData 
+          });
+        } catch(primaryErr) {
+          res = await fetch('https://5eeo6bfngypc.shares.zrok.io/api/process_video', { 
+            method: 'POST',
+            headers: { 'skip_zrok_interstitial': 'true' },
+            body: formData 
+          });
+        }
         let json = await res.json();
 
         if (json.status === 'success') {
