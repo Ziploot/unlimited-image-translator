@@ -269,6 +269,81 @@ body { padding-bottom: 110px !important; }
 .zl-sticky-close-btn:hover { background: #6366f1; transform: scale(1.1); }
 
 </style>
+<style>
+
+/* ZIPLOOT GLOBAL AD NETWORK & THEME ISOLATION SYSTEM */
+body {
+  padding-bottom: 120px !important;
+}
+.zl-header-nav {
+  position: relative;
+  z-index: 1000 !important;
+}
+.zl-ad-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  clear: both;
+}
+.zl-ad-native-container {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+}
+.zl-ad-banner-container {
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(8, 14, 42, 0.4);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.zl-sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgba(2, 6, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.zl-sticky-close {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: #818cf8;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+</style>
 </head>
 <body>
 
@@ -289,6 +364,31 @@ body { padding-bottom: 110px !important; }
     </div>
   </header>
 
+    <!-- Top Ad Network Section -->
+    <div class="zl-ad-section">
+      <!-- Native Link -->
+      <div class="zl-ad-native-container">
+        <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
+        <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
+      </div>
+      <!-- 728x90 Banner -->
+      <div class="zl-ad-banner-container">
+        <iframe id="zl_banner_frame_1" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;"></iframe>
+        <script>
+          (function(){
+            var f = document.getElementById('zl_banner_frame_1');
+            if(f){
+              var d = f.contentWindow.document;
+              d.open();
+              d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script></body></html>');
+              d.close();
+            }
+          })();
+        </script>
+      </div>
+    </div>
+
+
     <!-- ZipLoot Ad Network: Top Banner & Native Slots -->
     <div class="zl-ad-top-wrapper">
       <!-- Native Sponsored Link -->
@@ -298,413 +398,192 @@ body { padding-bottom: 110px !important; }
       </div>
       <!-- 728x90 Banner -->
       <div class="zl-ad-banner-box">
-        <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+        <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style><style>
+
+/* ZIPLOOT GLOBAL AD NETWORK & THEME ISOLATION SYSTEM */
+body {
+  padding-bottom: 120px !important;
+}
+.zl-header-nav {
+  position: relative;
+  z-index: 1000 !important;
+}
+.zl-ad-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  clear: both;
+}
+.zl-ad-native-container {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+}
+.zl-ad-banner-container {
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(8, 14, 42, 0.4);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.zl-sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgba(2, 6, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.zl-sticky-close {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: #818cf8;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+</style>
+</head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
   <!-- ZipLoot Ad Network: Sticky Bottom Ad Bar -->
   <div class="zl-sticky-ad-bar" id="zlStickyAdBar">
     <button class="zl-sticky-close-btn" onclick="document.getElementById('zlStickyAdBar').style.display='none'">✕</button>
-    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script></body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
+    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style><style>
+
+/* ZIPLOOT GLOBAL AD NETWORK & THEME ISOLATION SYSTEM */
+body {
+  padding-bottom: 120px !important;
+}
+.zl-header-nav {
+  position: relative;
+  z-index: 1000 !important;
+}
+.zl-ad-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  clear: both;
+}
+.zl-ad-native-container {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+}
+.zl-ad-banner-container {
+  width: 100%;
+  max-width: 728px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(8, 14, 42, 0.4);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.zl-sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: rgba(2, 6, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.zl-sticky-close {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: #818cf8;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+</style>
+</head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+  <!-- Sticky Footer Ad Bar -->
+  <div class="zl-sticky-ad-footer" id="zlStickyFooterAd">
+    <button class="zl-sticky-close" onclick="document.getElementById('zlStickyFooterAd').style.display='none'">✕</button>
+    <iframe id="zl_banner_frame_2" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;"></iframe>
+    <script>
+      (function(){
+        var f = document.getElementById('zl_banner_frame_2');
+        if(f){
+          var d = f.contentWindow.document;
+          d.open();
+          d.write('<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions={"key":"07443fff7d70e04b3642773f8f97367f","format":"iframe","height":90,"width":728,"params":{}};<'+'/script><script src="https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js"><'+'/script></body></html>');
+          d.close();
+        }
+      })();
+    </script>
   </div>
 
-  <!-- ZipLoot Ad Network: Social Bar Async Script -->
+  <!-- Native Social Bar Script (Directly before </body>) -->
   <script>
     window.addEventListener('load', function() {
       if (!document.getElementById('zlSocialBarScript')) {
-        var script = document.createElement('script');
-        script.id = 'zlSocialBarScript';
-        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
-        document.body.appendChild(script);
-      }
-    });
-  </script>
-
-</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
-      </div>
-    </div>
-
-
-  <!-- Main Content Wrap -->
-  <div class="wrap">
-    <div class="tool-card">
-      <h1 class="tool-title">Free AI <span>Watermark Remover</span> Studio</h1>
-      <p style="color: var(--ink-2); max-width: 640px; margin: 0 auto 24px;">Remove watermarks from AI videos and images seamlessly with high quality.</p>
-
-      <!-- Navigation Tabs -->
-      <div class="tab-nav">
-        <button class="tab-btn active" onclick="switchTab('imageTab', this)">🖼️ Image Remover (LaMa AI)</button>
-        <button class="tab-btn" onclick="switchTab('videoTab', this)">🎬 Video Remover (ProPainter Engine)</button>
-      </div>
-
-      <!-- TAB 1: IMAGE WATERMARK REMOVER -->
-      <div id="imageTab" class="tab-content active">
-        <div class="upload-zone" id="imgUploadZone" onclick="document.getElementById('imgInput').click()">
-          <p style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px;">🖼️ Click or Drag Image Here</p>
-          <p style="font-size: 13px; color: var(--ink-3);">Supports PNG, JPG, WEBP, JPEG</p>
-          <input type="file" id="imgInput" accept="image/*" style="display: none;" onchange="loadImgFile(event)">
-        </div>
-
-        <div id="imgStudio" style="display:none; flex-direction:column; align-items:center; gap:16px; width:100%;">
-          <div class="media-wrap">
-            <canvas id="imgCanvas"></canvas>
-          </div>
-          <div class="status-msg" id="imgStatus">🖌️ Draw/paint over the watermark area with your mouse</div>
-          <div class="toolbar">
-            <button class="btn-act" onclick="processImageInpaint()">⚡ Clean Watermark (LaMa AI)</button>
-            <a id="imgDownloadBtn" class="btn-act btn-green" style="display:none;" download="clean_watermark_free_image.png">💾 Save / Download Clean Image</a>
-            <button class="btn-act btn-sec" onclick="resetImgCanvas()">🔄 Reset Mask</button>
-            <button class="btn-act btn-sec" onclick="document.getElementById('imgInput').click()">📁 Change Image</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 2: VIDEO WATERMARK REMOVER -->
-      <div id="videoTab" class="tab-content">
-        <div class="upload-zone" id="vidUploadZone" onclick="document.getElementById('vidInput').click()">
-          <p style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px;">🎬 Click or Drag Video Here</p>
-          <p style="font-size: 13px; color: var(--ink-3);">Supports MP4, MOV, WEBM videos</p>
-          <input type="file" id="vidInput" accept="video/*" style="display: none;" onchange="loadVidFile(event)">
-        </div>
-
-        <div id="vidStudio" style="display:none; flex-direction:column; align-items:center; gap:16px; width:100%;">
-          <div class="media-wrap">
-            <video id="videoPlayer" controls muted loop playsinline></video>
-            <canvas id="videoOverlayCanvas"></canvas>
-          </div>
-          <div class="status-msg" id="vidStatus">📦 Drag a rectangle box over the watermark area on the video above</div>
-          <div class="toolbar">
-            <button class="btn-act" onclick="processVideoInpaint()">⚡ Clean Video Watermark</button>
-            <button class="btn-act btn-sec" onclick="resetVidBox()">🔄 Reset Box</button>
-            <button class="btn-act btn-sec" onclick="document.getElementById('vidInput').click()">📁 Change Video</button>
-          </div>
-
-          <div id="vidOutputArea" style="display:none; flex-direction:column; align-items:center; gap:14px; margin-top:14px; width:100%;">
-            <h3 style="font-size:16px; color:#4ade80;">🎉 Output Clean Video:</h3>
-            <video id="cleanVidPlayer" controls loop style="border-radius:12px; border:1px solid #4ade80; max-height:400px;"></video>
-            <a id="vidDownloadBtn" class="btn-act btn-green" download="clean_watermark_free_video.mp4">💾 Save / Download Clean Video (MP4)</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2026 ZIPLOOT PLATFORM &bull; ALL RIGHTS RESERVED
-  </footer>
-
-  <script>
-    // SECURE VERCEL SERVERLESS PROXY ENDPOINT
-    const API_BASE_URL = '';
-
-    function switchTab(tabId, btn) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      btn.classList.add('active');
-
-      if (tabId === 'videoTab' && videoPlayer.src) {
-        setTimeout(syncVideoCanvasSize, 100);
-      }
-    }
-
-    /* --- IMAGE REMOVER JS (LaMa AI) --- */
-    let imgCanvas = document.getElementById('imgCanvas');
-    let imgCtx = imgCanvas.getContext('2d');
-    let maskCanvas = document.createElement('canvas');
-    let maskCtx = maskCanvas.getContext('2d');
-    let rawImg = new Image();
-    let isDrawing = false;
-
-    function loadImgFile(e) {
-      let file = e.target.files[0];
-      if (!file) return;
-      let reader = new FileReader();
-      reader.onload = function(evt) {
-        rawImg.onload = function() {
-          imgCanvas.width = rawImg.width;
-          imgCanvas.height = rawImg.height;
-          maskCanvas.width = rawImg.width;
-          maskCanvas.height = rawImg.height;
-          resetImgCanvas();
-          document.getElementById('imgUploadZone').style.display = 'none';
-          document.getElementById('imgStudio').style.display = 'flex';
-          document.getElementById('imgDownloadBtn').style.display = 'none';
-        };
-        rawImg.src = evt.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-
-    function resetImgCanvas() {
-      imgCtx.drawImage(rawImg, 0, 0);
-      maskCtx.fillStyle = 'black';
-      maskCtx.fillRect(0, 0, maskCanvas.width, maskCanvas.height);
-      document.getElementById('imgDownloadBtn').style.display = 'none';
-      initImgDraw();
-    }
-
-    function initImgDraw() {
-      imgCanvas.onmousedown = (e) => { isDrawing = true; drawMask(e); };
-      imgCanvas.onmousemove = (e) => { if (isDrawing) drawMask(e); };
-      imgCanvas.onmouseup = () => { isDrawing = false; };
-
-      imgCanvas.ontouchstart = (e) => { isDrawing = true; drawMask(e.touches[0]); };
-      imgCanvas.ontouchmove = (e) => { if (isDrawing) drawMask(e.touches[0]); };
-      imgCanvas.ontouchend = () => { isDrawing = false; };
-    }
-
-    function drawMask(e) {
-      let rect = imgCanvas.getBoundingClientRect();
-      let scaleX = imgCanvas.width / rect.width;
-      let scaleY = imgCanvas.height / rect.height;
-      let x = (e.clientX - rect.left) * scaleX;
-      let y = (e.clientY - rect.top) * scaleY;
-
-      let brushSize = Math.max(16, Math.min(imgCanvas.width, imgCanvas.height) / 25);
-
-      imgCtx.fillStyle = 'rgba(239, 68, 68, 0.6)';
-      imgCtx.beginPath();
-      imgCtx.arc(x, y, brushSize, 0, Math.PI * 2);
-      imgCtx.fill();
-
-      maskCtx.fillStyle = 'white';
-      maskCtx.beginPath();
-      maskCtx.arc(x, y, brushSize, 0, Math.PI * 2);
-      maskCtx.fill();
-    }
-
-    async function processImageInpaint() {
-      let status = document.getElementById('imgStatus');
-      status.innerText = '⏳ Processing Image on AI Engine...';
-      
-      let imgDataB64 = imgCanvas.toDataURL('image/png');
-      let maskDataB64 = maskCanvas.toDataURL('image/png');
-
-      let payload = JSON.stringify({ image: imgDataB64, mask: maskDataB64 });
-
-      try {
-        let res;
-        try {
-          res = await fetch('/api/inpaint', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: payload
-          });
-        } catch(primaryErr) {
-          // Backup fallback to zrok URL
-          res = await fetch('https://5eeo6bfngypc.shares.zrok.io/api/inpaint', {
-            method: 'POST',
-            headers: { 
-              'Content-Type': 'application/json',
-              'skip_zrok_interstitial': 'true'
-            },
-            body: payload
-          });
-        }
-
-        let text = await res.text();
-        let json;
-        try { json = JSON.parse(text); } catch(e) { throw new Error('Processing failed. Please try again.'); }
-
-        if (json.status === 'success') {
-          let cleanImg = new Image();
-          cleanImg.onload = function() {
-            imgCtx.drawImage(cleanImg, 0, 0, imgCanvas.width, imgCanvas.height);
-            maskCtx.fillStyle = 'black';
-            maskCtx.fillRect(0, 0, maskCanvas.width, maskCanvas.height);
-            status.innerText = '🎉 SUCCESS! Watermark removed with AI!';
-            
-            let downloadBtn = document.getElementById('imgDownloadBtn');
-            downloadBtn.href = json.clean_image;
-            downloadBtn.style.display = 'inline-flex';
-          };
-          cleanImg.src = json.clean_image;
-        } else {
-          status.innerText = '❌ Error: ' + (json.error || 'Processing failed');
-        }
-      } catch (err) {
-        status.innerText = '❌ Processing Error: ' + err.message;
-      }
-    }
-
-    /* --- VIDEO REMOVER JS (ProPainter) --- */
-    let videoPlayer = document.getElementById('videoPlayer');
-    let videoOverlayCanvas = document.getElementById('videoOverlayCanvas');
-    let vidCtx = videoOverlayCanvas.getContext('2d');
-
-    let vidFile = null;
-    let isVidSelecting = false;
-    let vStartX = 0, vStartY = 0;
-    let vidSelectRect = null;
-
-    function syncVideoCanvasSize() {
-      if (videoPlayer.clientWidth > 0 && videoPlayer.clientHeight > 0) {
-        videoOverlayCanvas.width = videoPlayer.clientWidth;
-        videoOverlayCanvas.height = videoPlayer.clientHeight;
-        videoOverlayCanvas.style.width = videoPlayer.clientWidth + 'px';
-        videoOverlayCanvas.style.height = videoPlayer.clientHeight + 'px';
-        drawVidBox();
-      }
-    }
-
-    function loadVidFile(e) {
-      vidFile = e.target.files[0];
-      if (!vidFile) return;
-
-      let url = URL.createObjectURL(vidFile);
-      videoPlayer.src = url;
-
-      videoPlayer.onloadeddata = function() {
-        document.getElementById('vidUploadZone').style.display = 'none';
-        document.getElementById('vidStudio').style.display = 'flex';
-        syncVideoCanvasSize();
-        initVidBoxSelection();
-      };
-      
-      window.addEventListener('resize', syncVideoCanvasSize);
-    }
-
-    function initVidBoxSelection() {
-      function startSelect(e) {
-        let rect = videoOverlayCanvas.getBoundingClientRect();
-        let clientX = e.clientX || (e.touches && e.touches[0].clientX);
-        let clientY = e.clientY || (e.touches && e.touches[0].clientY);
-        vStartX = clientX - rect.left;
-        vStartY = clientY - rect.top;
-        isVidSelecting = true;
-      }
-
-      function moveSelect(e) {
-        if (!isVidSelecting) return;
-        let rect = videoOverlayCanvas.getBoundingClientRect();
-        let clientX = e.clientX || (e.touches && e.touches[0].clientX);
-        let clientY = e.clientY || (e.touches && e.touches[0].clientY);
-        let curX = clientX - rect.left;
-        let curY = clientY - rect.top;
-
-        vidSelectRect = {
-          x: Math.min(vStartX, curX),
-          y: Math.min(vStartY, curY),
-          w: Math.abs(curX - vStartX),
-          h: Math.abs(curY - vStartY)
-        };
-
-        drawVidBox();
-      }
-
-      function endSelect() { isVidSelecting = false; }
-
-      videoOverlayCanvas.onmousedown = startSelect;
-      videoOverlayCanvas.onmousemove = moveSelect;
-      videoOverlayCanvas.onmouseup = endSelect;
-
-      videoOverlayCanvas.ontouchstart = startSelect;
-      videoOverlayCanvas.ontouchmove = moveSelect;
-      videoOverlayCanvas.ontouchend = endSelect;
-    }
-
-    function drawVidBox() {
-      vidCtx.clearRect(0, 0, videoOverlayCanvas.width, videoOverlayCanvas.height);
-      if (vidSelectRect) {
-        vidCtx.strokeStyle = '#22d3ee';
-        vidCtx.lineWidth = 3;
-        vidCtx.fillStyle = 'rgba(34, 211, 238, 0.35)';
-        vidCtx.fillRect(vidSelectRect.x, vidSelectRect.y, vidSelectRect.w, vidSelectRect.h);
-        vidCtx.strokeRect(vidSelectRect.x, vidSelectRect.y, vidSelectRect.w, vidSelectRect.h);
-      }
-    }
-
-    function resetVidBox() {
-      vidSelectRect = null;
-      vidCtx.clearRect(0, 0, videoOverlayCanvas.width, videoOverlayCanvas.height);
-    }
-
-    async function processVideoInpaint() {
-      let status = document.getElementById('vidStatus');
-      if (!vidSelectRect) {
-        alert('Please drag a rectangle box over the watermark on the video first!');
-        return;
-      }
-
-      status.innerText = '⚡ Processing Video Frames with AI Engine...';
-
-      let formData = new FormData();
-      formData.append('video', vidFile);
-      formData.append('rect', JSON.stringify({
-        x_ratio: vidSelectRect.x / videoOverlayCanvas.width,
-        y_ratio: vidSelectRect.y / videoOverlayCanvas.height,
-        w_ratio: vidSelectRect.w / videoOverlayCanvas.width,
-        h_ratio: vidSelectRect.h / videoOverlayCanvas.height
-      }));
-
-      try {
-        let res;
-        try {
-          res = await fetch('/api/process_video', { 
-            method: 'POST', 
-            body: formData 
-          });
-        } catch(primaryErr) {
-          res = await fetch('https://5eeo6bfngypc.shares.zrok.io/api/process_video', { 
-            method: 'POST',
-            headers: { 'skip_zrok_interstitial': 'true' },
-            body: formData 
-          });
-        }
-        let json = await res.json();
-
-        if (json.status === 'success') {
-          status.innerText = '🎉 SUCCESS! Watermark removed from video!';
-          let cleanUrl = json.video_url + '?t=' + Date.now();
-          document.getElementById('cleanVidPlayer').src = cleanUrl;
-          
-          let vidDownloadBtn = document.getElementById('vidDownloadBtn');
-          vidDownloadBtn.href = cleanUrl;
-          
-          document.getElementById('vidOutputArea').style.display = 'flex';
-        } else {
-          status.innerText = '❌ Error: ' + (json.error || 'Video processing failed');
-        }
-      } catch (err) {
-        status.innerText = '❌ Error: ' + err.message;
-      }
-    }
-  </script>
-
-  <!-- Sticky Footer Ad Bar -->
-  <div id="stickyAdBar" style="position:fixed;bottom:0;left:0;right:0;height:80px;background:rgba(3,7,22,0.95);backdrop-filter:blur(24px);border-top:1px solid rgba(100,110,255,0.3);z-index:7000;display:flex;align-items:center;justify-content:center;box-shadow:0 -16px 48px rgba(0,0,0,0.55);">
-    <button onclick="document.getElementById('stickyAdBar').style.display='none'" style="position:absolute;top:-14px;right:20px;width:28px;height:28px;background:#818cf8;border:none;border-radius:50%;color:#fff;font-size:14px;cursor:pointer;">✕</button>
-    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
-  <!-- Social Bar Ad Script -->
-  <script>
-    window.addEventListener('load', function() {
-      if (!document.getElementById('socialBarAdScript')) {
-        var script = document.createElement('script');
-        script.id = 'socialBarAdScript';
-        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
-        document.body.appendChild(script);
-      }
-    });
-  </script>
-
-</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
-  </div>
-
-
-  <!-- Social Bar Ad Script -->
-  <script>
-    window.addEventListener('load', function() {
-      if (!document.getElementById('socialBarAdScript')) {
-        var script = document.createElement('script');
-        script.id = 'socialBarAdScript';
-        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
-        document.body.appendChild(script);
+        var s = document.createElement('script');
+        s.id = 'zlSocialBarScript';
+        s.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+        document.body.appendChild(s);
       }
     });
   </script>
 
 </body>
-</html>
-"""
+</html>"""
 
 def run_lama_inference(img_bgr, mask_gray):
     orig_h, orig_w, _ = img_bgr.shape
