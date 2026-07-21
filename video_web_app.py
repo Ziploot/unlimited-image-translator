@@ -346,6 +346,7 @@ body {
 </style>
 <style>
 
+
 /* ZIPLOOT UNIFORM MASTER NAVBAR & AD SYSTEM */
 :root {
   --nav-h: 80px;
@@ -442,6 +443,8 @@ header {
 @media (max-width: 768px) {
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
+  .zl-sticky-ad-footer { display: none !important; }
+  body { padding-bottom: 20px !important; }
 }
 
 /* Zero Outline Box Ad Section */
@@ -471,11 +474,12 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 10000;
 }
 
-</style>
 </head>
 <body>
 
   <!-- Navigation -->
+  
+  <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
   
   <!-- Floating Glass Navbar (100% Uniform across ZipLoot) -->
   <header>
@@ -510,6 +514,7 @@ header {
       </ul>
     </div>
   </header>
+
 
 
     <!-- Top Ad Network Section -->
