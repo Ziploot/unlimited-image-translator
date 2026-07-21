@@ -237,6 +237,38 @@ video { display: block; max-width: 100%; max-height: 500px; }
 footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;font-family:var(--font-m);font-size:11px;color:var(--ink-3);}
   </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+
+/* ZipLoot Ad Network Safe Layout System */
+body { padding-bottom: 110px !important; }
+.zl-ad-top-wrapper {
+  width: 100%; max-width: 1240px; margin: 15px auto 25px; padding: 0 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  z-index: 10; position: relative;
+}
+.zl-ad-banner-box {
+  width: 100%; max-width: 728px; min-height: 90px;
+  display: flex; justify-content: center; align-items: center;
+  background: rgba(8, 14, 42, 0.4); border: 1px solid rgba(129, 140, 248, 0.15);
+  border-radius: 12px; overflow: hidden;
+}
+.zl-sticky-ad-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 90px;
+  background: rgba(3, 7, 22, 0.96); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(129, 140, 248, 0.3); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.7);
+}
+.zl-sticky-close-btn {
+  position: absolute; top: -14px; right: 24px; width: 28px; height: 28px;
+  background: #818cf8; border: none; border-radius: 50%; color: #ffffff;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); transition: transform 0.2s, background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.zl-sticky-close-btn:hover { background: #6366f1; transform: scale(1.1); }
+
+</style>
 </head>
 <body>
 
@@ -257,26 +289,28 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
     </div>
   </header>
 
-  <!-- Top Native Ad Block -->
-  <div style="width: 100%; max-width: 1240px; margin: 10px auto 12px; padding: 0 16px; text-align: center;">
-    <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
-    <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
+    <!-- ZipLoot Ad Network: Top Banner & Native Slots -->
+    <div class="zl-ad-top-wrapper">
+      <!-- Native Sponsored Link -->
+      <div style="width: 100%; text-align: center;">
+        <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
+        <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
+      </div>
+      <!-- 728x90 Banner -->
+      <div class="zl-ad-banner-box">
+        <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
+  <!-- ZipLoot Ad Network: Sticky Bottom Ad Bar -->
+  <div class="zl-sticky-ad-bar" id="zlStickyAdBar">
+    <button class="zl-sticky-close-btn" onclick="document.getElementById('zlStickyAdBar').style.display='none'">✕</button>
+    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script></body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
   </div>
 
-
-  <!-- Banner 728x90 Ad Block -->
-  <div style="display:flex;justify-content:center;align-items:center;margin:20px auto;width:100%;min-height:94px;overflow:hidden;">
-    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
-  <!-- Sticky Footer Ad Bar -->
-  <div id="stickyAdBar" style="position:fixed;bottom:0;left:0;right:0;height:80px;background:rgba(3,7,22,0.95);backdrop-filter:blur(24px);border-top:1px solid rgba(100,110,255,0.3);z-index:7000;display:flex;align-items:center;justify-content:center;box-shadow:0 -16px 48px rgba(0,0,0,0.55);">
-    <button onclick="document.getElementById('stickyAdBar').style.display='none'" style="position:absolute;top:-14px;right:20px;width:28px;height:28px;background:#818cf8;border:none;border-radius:50%;color:#fff;font-size:14px;cursor:pointer;">✕</button>
-    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script>
-  <!-- Social Bar Ad Script -->
+  <!-- ZipLoot Ad Network: Social Bar Async Script -->
   <script>
     window.addEventListener('load', function() {
-      if (!document.getElementById('socialBarAdScript')) {
+      if (!document.getElementById('zlSocialBarScript')) {
         var script = document.createElement('script');
-        script.id = 'socialBarAdScript';
+        script.id = 'zlSocialBarScript';
         script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
         document.body.appendChild(script);
       }
@@ -284,23 +318,8 @@ footer{border-top:1px solid var(--border);padding:48px 0 40px;text-align:center;
   </script>
 
 </body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
-  </div>
-
-
-  <!-- Social Bar Ad Script -->
-  <script>
-    window.addEventListener('load', function() {
-      if (!document.getElementById('socialBarAdScript')) {
-        var script = document.createElement('script');
-        script.id = 'socialBarAdScript';
-        script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
-        document.body.appendChild(script);
-      }
-    });
-  </script>
-
-</body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
-  </div>
+      </div>
+    </div>
 
 
   <!-- Main Content Wrap -->
