@@ -2,8 +2,9 @@
 #  ZipLoot AI Watermark Remover - Windows Single File Installer
 # =================================================================
 
+Set-Location -Path $PSScriptRoot
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Write-Host "[+] Starting ZipLoot Watermark AI Setup..." -ForegroundColor Cyan
+Write-Host "[+] Starting ZipLoot Watermark AI Setup in: $PSScriptRoot" -ForegroundColor Cyan
 
 # Find Python executable on Windows
 $pythonPath = "python"
