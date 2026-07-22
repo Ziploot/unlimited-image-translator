@@ -1,4 +1,4 @@
-# ZipLoot Optimized Production Server
+# ZipLoot WebP & Bandwidth Optimized Production Server
 import http.server
 import socketserver
 
