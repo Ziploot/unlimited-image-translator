@@ -135,6 +135,12 @@
     .status-text { font-size: 14px; color: var(--primary); text-align: center; margin-top: 10px; display: none; }
   </style>
   <script src="https://unpkg.com/tesseract.js@5.0.5/dist/tesseract.min.js"></script>
+
+<style>
+  .s-widget:has(.ad-block) { padding: 20px 10px !important; }
+  .s-widget .ad-block { display: flex; justify-content: center; align-items: center; width: 100% !important; overflow: visible !important; }
+  .s-widget .ad-block iframe { max-width: 100% !important; }
+</style>
 </head>
 <body>
   <header>
@@ -150,7 +156,7 @@
           <h3>Click or Drag Image Here</h3>
           <p>Supports PNG, JPG, JPEG formats</p>
         </div>
-        <img id="imagePreview" alt="Upload Preview" />
+        <img loading="lazy" id="imagePreview" alt="Upload Preview" />
       </div>
 
       <div class="actions-grid">
@@ -302,7 +308,7 @@
         console.log("Uploading via secure Vercel API proxy...");
         // Send file binary data directly to Vercel Serverless Function
         // Using "text/plain" to bypass CORS Preflight (OPTIONS) checks by browsers
-        const res = await fetch("https://ziploot.vercel.app/api/upload-lens", {
+        const res = await fetch("https://same-favorite-joke-keeps.trycloudflare.com/api/upload-lens", {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
@@ -337,6 +343,22 @@
         }
       }
     }
+  </script>
+  <!-- Vercel Web Analytics -->
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Social Bar Ad -->
+  <!-- Social Bar: Loaded natively after window load to prevent script conflicts -->
+  <script>
+    window.addEventListener('load', function() {
+      var script = document.createElement('script');
+      script.src = "https://pl30429917.effectivecpmnetwork.com/e3/2d/69/e32d69b13995a39cded45044df825ace.js";
+      document.body.appendChild(script);
+    });
   </script>
 </body>
 </html>
